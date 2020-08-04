@@ -12,15 +12,6 @@ install:
   # Install dependencies.
   - pip install -r requirements.txt && pip install -r test-requirements.txt
 
-before_script:
-  # Use actual Ansible Galaxy role name for the project directory.
-  - cd ../
-  - mv ansible-role-$ROLE_NAME $ROLE_NAME
-  - cd $ROLE_NAME
-
 script:
   # Run tests.
   - molecule test
-
-notifications:
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/

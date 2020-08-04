@@ -1,9 +1,14 @@
-# Ansible Role to secure docker installation
+# Ansible Molecule Demo Repo
 
-[![Build Status](https://travis-ci.org/ContinuousSecurityTooling/ansible-role-secure-docker.svg?branch=master)](https://travis-ci.org/ContinuousSecurityTooling/ansible-role-secure-docker)
+[![Build Status](https://travis-ci.org/holisticon/ansible-molecule-example.svg?branch=master)](https://travis-ci.org/holisticon/ansible-molecule-example)
 
-> Main purpose is to prevent docker containers to expose ports via iptables port-forward to non-local interfaces
+> Main purpose is to show molecule usage
 
+
+## Requirements
+
+## Usage
 ```
-ansible-galaxy install continuoussecuritytooling.secure_docker
+pip install -r requirements.txt && pip install -r test-requirements.txt
+molecule test
 ```
