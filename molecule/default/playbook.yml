@@ -12,9 +12,8 @@
     mysql_databases:
       - name: "testDB"
 
-
   roles:
-    - role: secure-docker
+    - role: ../..
 
   post_tasks:
     - name: Starting a container
