@@ -1,11 +1,18 @@
 ---
 language: python
-services: docker
+python:
+  - "3.5"
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+  - "3.8"
+services:
+  - docker
 
 env:
   matrix:
     - MOLECULE_DISTRO: debian:9
-    - MOLECULE_DISTRO: debian:10
+
+before_install: ".bin/setup_travis.sh"
 
 install:
   # Install dependencies.
