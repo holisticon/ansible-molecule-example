@@ -3,10 +3,9 @@ language: python
 services: docker
 
 env:
-  global:
-    - ROLE_NAME: secure-docker
   matrix:
-    - MOLECULE_DISTRO: debian9
+    - MOLECULE_DISTRO: debian:9
+    - MOLECULE_DISTRO: debian:10
 
 install:
   # Install dependencies.
